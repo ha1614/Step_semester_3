@@ -30,7 +30,8 @@ public final class F4InstanceStaticBoundary {
             }
             admissionCount++;
             this.name = name;
-            this.regNo = String.format("RA2311003010%02d", admissionCount);
+            // The generated suffix continues after the first ten university admissions.
+            this.regNo = String.format("RA2311003010%02d", admissionCount + 10);
             this.attendance = attendance;
         }
 
