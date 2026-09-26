@@ -4,31 +4,31 @@ public final class F1SrmAttendanceSystem {
     private F1SrmAttendanceSystem() {
     }
 
-    private static final class SrmStudent {
+    public static final class SrmStudent {
         private final String name;
         private final String regNo;
         private int attendance;
 
-        private SrmStudent(String name, String regNo, int attendance) {
+        public SrmStudent(String name, String regNo, int attendance) {
             this.name = name;
             this.regNo = regNo;
             addAttendanceUpdate(attendance);
         }
 
-        private void addAttendanceUpdate(int newAttendance) {
+        public void addAttendanceUpdate(int newAttendance) {
             if (newAttendance < 0 || newAttendance > 100) {
                 throw new IllegalArgumentException("Attendance must be from 0 to 100");
             }
             attendance = newAttendance;
         }
 
-        private boolean isEligible() {
+        public boolean isEligible() {
             return attendance >= 75;
         }
     }
 
     // Static because it aggregates an array; eligibility belongs to each individual student.
-    private static double classAverage(SrmStudent[] students) {
+    public static double classAverage(SrmStudent[] students) {
         if (students == null || students.length == 0) return 0.0;
         int total = 0;
         int count = 0;

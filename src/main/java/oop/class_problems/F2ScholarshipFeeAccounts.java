@@ -37,11 +37,10 @@ public final class F2ScholarshipFeeAccounts {
             super(regNo, totalFee);
         }
 
-        boolean payInTwoInstallments(double amount) {
-            if (!Double.isFinite(amount) || amount <= 0) return false;
+        void payInTwoInstallments(double amount) {
+            if (!Double.isFinite(amount) || amount <= 0) return;
             pay(amount);
             pay(amount);
-            return true;
         }
     }
 
