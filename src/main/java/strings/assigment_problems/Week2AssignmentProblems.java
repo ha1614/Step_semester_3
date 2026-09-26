@@ -3,13 +3,16 @@ package strings.assigment_problems;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.Locale;
 
 public final class Week2AssignmentProblems {
-    private static final Set<String> STOP_WORDS = Set.of("the", "was", "and", "a", "is", "of", "in");
+    private static final Set<String> STOP_WORDS = new HashSet<>(
+        Arrays.asList("the", "was", "and", "a", "is", "of", "in"));
 
     private Week2AssignmentProblems() {
     }
